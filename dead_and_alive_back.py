@@ -1,6 +1,7 @@
 import numpy as np
 from qiskit import QuantumCircuit, ClassicalRegister, QuantumRegister
-from qiskit import Aer, execute
+from qiskit import execute
+import qiskit_aer as Aer
 from module_qis import partial_trace
 
 def liveliness(nhood):

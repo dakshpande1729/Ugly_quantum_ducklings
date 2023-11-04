@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 import json
 
-from dead_and_alive_back import DSQGOL, SQGOL, liveliness
+from dead_and_alive_back import DSQDA, SQGDA, liveness
 
 pygame.init()
 

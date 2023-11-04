@@ -4,7 +4,9 @@ from qiskit import execute
 import qiskit_aer as Aer
 from module_qis import partial_trace
 
-def liveliness(nhood):
+
+
+def liveness(nhood):
     v=nhood
     a = v[0][0][0]+v[0][1][0]+v[0][2][0]+v[1][0][0]+v[1][2][0]+v[2][0][0]+v[2][1][0]+v[2][2][0]
 
@@ -12,8 +14,8 @@ def liveliness(nhood):
 
 
 
-def SQGOL(nhood):
-    a = liveliness(nhood)
+def SQDA(nhood):
+    a = liveness(nhood)
     value =  nhood[1][1]
     alive = np.array([1.0,0.0])
     dead = np.array([0.0,1.0])
@@ -58,9 +60,9 @@ def init_quantum(nhood):
     value = np.real(value)
     return value
 
-def DSQGOL(nhood):
+def DSQDA(nhood):
 
-    a = liveliness(nhood)
+    a = liveness(nhood)
 
     value =  nhood[1][1][0]
     value =  nhood[1][1]
